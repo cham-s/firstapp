@@ -16,6 +16,7 @@ import { HeroService } from './hero.service';
                     <label>name: </label>
                     <input [(ngModel)]="hero.name" placeholder="name">
                 </div>
+                <button (click)="goBack()">Back</button>
             </div>
     `
 })
@@ -30,6 +31,10 @@ export class HeroDetailComoponent implements OnInit{
         private location: Location
                
     ) { }
+
+    goBack(): void {
+        this.location.back();
+    }
 
     ngOnInit(): void {
         this.route.params.forEach((params: Params) => {
