@@ -21,7 +21,7 @@ import { HeroService } from './hero.service';
     `
 })
 
-export class HeroDetailComoponent implements OnInit{
+export class HeroDetailComponent implements OnInit{
     @Input()
     hero: Hero;
 

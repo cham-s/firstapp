@@ -5,7 +5,7 @@ import { FormsModule } from '@angular/forms';
 import { AppComponent } from './app.component';
 import { DashboardComponent } from './dashboard.component';
 import { HeroesComponent } from './heroes.component';
-import { HeroDetailComoponent } from './hero-detail.component';
+import { HeroDetailComponent } from './hero-detail.component';
 import { HeroService } from './hero.service';
 import { AppRoutingModule } from './app-routing.module';
 
@@ -16,7 +16,7 @@ import { AppRoutingModule } from './app-routing.module';
                 AppRoutingModule
                  ],
     declarations: [ AppComponent,
-                    HeroDetailComoponent,
+                    HeroDetailComponent,
                     HeroesComponent,
                     DashboardComponent
                 ],
