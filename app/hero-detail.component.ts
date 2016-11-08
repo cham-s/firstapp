@@ -7,6 +7,7 @@ import { HeroService } from './hero.service';
 
 
 @Component({
+    moduleId: module.id,
     selector: 'my-hero-detail',
     template: `
             <div *ngIf="hero">
@@ -18,7 +19,9 @@ import { HeroService } from './hero.service';
                 </div>
                 <button (click)="goBack()">Back</button>
             </div>
-    `
+            <button (click)="save()">Save</button>
+    `,
+    styleUrls: ['hero-detail.component.css']
 })
 
 export class HeroDetailComponent implements OnInit{
@@ -34,6 +37,11 @@ export class HeroDetailComponent implements OnInit{
 
     goBack(): void {
         this.location.back();
+    }
+
+    save(): void {
+        this.heroService.update(this.hero)
+            .then(() => this.goBack);
     }
 
     ngOnInit(): void {
